@@ -144,9 +144,7 @@ class JsonObject<E> extends Object implements Map, Iterable  {
 
     if (mirror.isGetter && (positionalArgs == 0)) {
       //synthetic getter
-      if (this.containsKey(property)) {
-        return this[property];
-      }
+      return this[property];
     }
     else if (mirror.isSetter && positionalArgs == 1) {
       //synthetic setter
